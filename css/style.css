@@ -45,6 +45,7 @@ header::after{
     color: #FFF;
 }
 
+
 .contact_info{
     font-family: 'Montserrat', sans-serif;    
     padding: 20px 0px;
@@ -52,17 +53,24 @@ header::after{
     align-items: center;
     align-content: center;
 }
+.company_logo{
+    padding-bottom: 10px;    
+}
+
 .contact{
     margin-left: 30px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
+
 .contact i{
     color: #bdc7c7;
 }
 .contact a{
     color: #FFF;
-    margin-left: 5px        
+    margin-left: 10px;
+    text-decoration: none;       
 }
 
 .get_started .btn_get_started{
@@ -126,12 +134,44 @@ header::after{
     font-weight: 400;
     color: #0f5f5c;
 }
+
 .section_title span{
+    display: block;
+    position: relative;
     height: 1px;
     width: 80px;
+    background: transparent;    
     margin: 15px auto;
-    background: #6fb048;
+    transition: .4s all ease-in-out;
 }
+
+.section_title span::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0%;
+    bottom: -5px;
+    height: 1px;
+    background: #6fb048;
+    transition: .4s all ease-in-out;    
+}
+.section_title span::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 0%;
+    bottom: -5px;
+    height: 1px;
+    background: #6fb048;
+    transition: .4s all ease-in-out;
+}
+.feature:hover .section_title span::before, .detail_section:hover .section_title span::before, .pricing_section:hover .section_title span::before, .plan_features:hover .section_title span::before, .need_help:hover .section_title span::before{
+    width: 50%;
+}
+.feature:hover .section_title span::after, .detail_section:hover .section_title span::after, .pricing_section:hover .section_title span::after, .plan_features:hover .section_title span::after, .need_help:hover .section_title span::after{
+    width: 50%;
+}
+
 .section_title p, .detail_section .detail_info p{
     color: #83a7a5;
     font-size: 15px;
@@ -163,8 +203,7 @@ header::after{
     height: 100px;
     width: 2px;
     margin: auto;
-    background: #c2c2c2;
-    
+    background: #c2c2c2;  
 }
 
 .mid_section .horizontal hr{
@@ -277,7 +316,7 @@ header::after{
 
 .feature_detail{
     width: 100%;
-    background: #f9f9f9;
+    background: #eef1ec;
     padding: 70px 0px;
     display: flex;
     align-items: center;
